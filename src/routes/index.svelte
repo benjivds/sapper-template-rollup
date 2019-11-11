@@ -35,8 +35,14 @@
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>
+<script>
+    import Login from './../components/Login.svelte';
+    import {currentUser} from './../stores/user.js';
+</script>
 
-<h1>Great success!</h1>
+<h1>Great success {#if $currentUser} {$currentUser.displayName} {/if}!</h1>
+
+<Login />
 
 <figure>
 	<img alt='Borat' src='great-success.png'>

@@ -1,5 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+    import UserObserver from '../components/UserObserver.svelte';
 
 	export let segment;
 </script>
@@ -14,7 +15,7 @@
 		box-sizing: border-box;
 	}
 </style>
-
+<UserObserver />
 <Nav {segment}/>
 
 <main>
